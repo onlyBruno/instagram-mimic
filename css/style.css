@@ -1,0 +1,212 @@
+/*Setting values to default */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #FAFAFA;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+/*Instagram classes */
+.instagram-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: start;
+    height: 100vh;
+}
+.instagram-phone{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 38.625rem;
+}
+#instagram-phone-carousel {
+    position: absolute;
+    z-index: 10;
+    margin-top: 8px;
+    margin-left: 151px;
+    width: 240px;
+    height: 427px;
+}
+.instagram-phone img.mockup-phone {
+    height: 618px;
+}
+.instagram-quick_login {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: column;
+    margin-top: 12px;
+    width: 350px;
+    min-height: 34rem;
+}
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    width: 100%;
+    margin-bottom: 0.8rem;
+}
+.group:nth-child(1) {
+    min-height: 19rem;
+}
+.group p {
+    margin: 15px;
+    padding: 0 40px;
+}
+.instagram-logo {
+    background-image: url('../img/instagram-sprite_core.png');
+    background-repeat: no-repeat;
+    background-position: 0 -130px;
+    height: 51px;
+    width: 175px;
+    margin: 22px auto 12px;
+}
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px 0;
+}
+.profile-picture img {
+    height: 100px;    
+}
+.instagram-login{
+    background-color: #0095f6;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 5px 25px;
+    margin: 1rem 0;
+}
+.link-blue a{
+    color:#0095f6;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 1.3rem 0;
+}
+.download-stores {
+    display: flex;
+    width: 23rem;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+.download-app {
+    height: 2.75rem;
+    width: 136px;
+    background-size: cover;
+    border-radius: 5px;
+}
+.download-app:nth-child(1){
+    background-image: url('../img/apple-store_button.png');
+}
+.download-app:nth-child(2) {
+    background-image: url('../img/google-play_button.png');
+}
+/*Responsive */
+@media (max-width:875px){
+    .instagram-phone{
+        display:none
+    }
+}
+@media (max-width:450px){
+    .group{
+        background-color:transparent;
+        border-style: none;
+    }
+    .instagram-wrapper {
+        align-items:start;
+    }
+    .group.not-account, .get-the-app {
+        display: none;
+    }
+}
+/*Cross-fading images effect*/
+@keyframes cf4FadeInOut {
+    0% {
+      opacity:1;
+    }
+    17% {
+      opacity:1;
+    }
+    25% {
+      opacity:0;
+    }
+    83% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+#instagram-phone-carousel img {
+    position:absolute;
+    left:0;
+
+    -webkit-animation-name: cf4FadeInOut;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 20s;
+  
+    -moz-animation-name: cf4FadeInOut;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 20s;
+  
+    -o-animation-name: cf4FadeInOut;
+    -o-animation-timing-function: ease-in-out;
+    -o-animation-iteration-count: infinite;
+    -o-animation-duration: 20s;
+  
+    animation-name: cf4FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+#instagram-phone-carousel img:nth-of-type(1) {
+    -webkit-animation-delay: 15s;
+    -moz-animation-delay: 15s;
+    -o-animation-delay: 15s;
+    animation-delay: 15s;
+}
+#instagram-phone-carousel img:nth-of-type(2) {
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    -o-animation-delay: 10s;
+    animation-delay: 10s;
+}
+#instagram-phone-carousel img:nth-of-type(3) {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    -o-animation-delay: 5s;
+    animation-delay: 5s;
+}
+#cinstagram-phone-carouself4a img:nth-of-type(4) {
+    -webkit-animation-delay: 0;
+    -moz-animation-delay: 0;
+    -o-animation-delay: 0;
+    animation-delay: 0;
+}
